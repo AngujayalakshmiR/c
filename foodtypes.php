@@ -9,7 +9,7 @@
     />
     <link
       rel="icon"
-      href="assets/img/KR_LOGO.jpg"
+      href="assets/img/KR_LOGO.png"
       type="image/x-icon" style="border-radius: 50%;"
     />
 
