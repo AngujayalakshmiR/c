@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>MKCE - Canteen Management</title>
+    <title>MKCE Trayo - Smart Canteen</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
@@ -10,7 +10,7 @@
     <link
       rel="icon"
       href="assets/img/KR_LOGO.jpg"
-      type="image/x-icon"
+      type="image/x-icon" style="border-radius: 50%;"
     />
 
     <!-- Fonts and icons -->
