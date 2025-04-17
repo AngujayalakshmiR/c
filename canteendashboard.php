@@ -77,9 +77,9 @@
           </div>
           <!-- Navbar Header -->
           <nav
-            class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom"
+            class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom" style="background-color:rgb(0, 176, 234);"
           >
-            <div class="container-fluid">
+            <div class="container-fluid" >
               <nav
                 class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
               >
@@ -104,8 +104,8 @@
                 </li>
 
                 <li class="nav-item topbar-user dropdown hidden-caret">
-                 <a class="dropdown-item" href="#" style="font-size: large;"><i class="
-                        fas fa-sign-out-alt" style="font-size: large;"></i>&nbsp; Logout</a>
+                 <a class="dropdown-item" href="#" style="font-size: larger;color:#fff;"><i class="
+                        fas fa-sign-out-alt" style="font-size: medium;"></i>&nbsp; Logout</a>
                 </li>
               </ul>
             </div>
