@@ -44,7 +44,7 @@
   <body>
     <div class="wrapper">
       <!-- Sidebar -->
-      <?php include('header.php'); ?>
+      <?php include ('header.php'); ?>
       <!-- End Sidebar -->
 
       <div class="main-panel">
@@ -114,47 +114,121 @@
 
         <div class="container">
           <div class="page-inner">
-            <div
-              class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
-            >
-              <div>
-                <h3 class="fw-bold mb-3">Dashboard</h3>
-              </div>
-              <!-- <div class="ms-md-auto py-2 py-md-0">
-                <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
-                <a href="#" class="btn btn-primary btn-round">Add Customer</a>
-              </div> -->
+            <div class="page-header">
+              <h3 class="fw-bold mb-3">FOOD ITEMS</h3>
+              <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                  <a href="index.php">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                  <a href="foodtypes.php">New Food Items</a>
+                </li>
+              </ul>
             </div>
             <div class="row">
-            <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">RazorPay Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="d-flex align-items-center w-100 gap-3 flex-wrap">
+                      <h4 class="card-title me-auto mb-2 mb-md-0">Add Food</h4>
+
+                      <!-- Food name input -->
+                      <input
+                        type="text"
+                        class="form-control shadow-sm border-0"
+                        placeholder="Enter food name"
+                        id="foodNameInput"
+                        style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px;"
+                      />
+
+                      <!-- Amount input -->
+                      <input
+                        type="number"
+                        class="form-control shadow-sm border-0"
+                        placeholder="Enter amount"
+                        id="foodAmountInput"
+                        style="max-width: 150px; background-color: #f1faff; color: #333; border-radius: 8px;"
+                      />
+
+                      <!-- Stylish file input -->
+                      <label for="foodImageInput" id="fileLabel" style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px; padding: 8px 12px; cursor: pointer; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <i class="fa fa-upload me-2"></i> Upload Image
+                      </label>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        id="foodImageInput"
+                        style="display: none;"
+                        onchange="updateFileName()"
+                      />
+
+                      <!-- Add button -->
+                      <button
+                        class="btn btn-round shadow-sm"
+                        style="background-color: rgb(0, 176, 234); color: white; font-weight: 500; border-radius: 25px; padding: 8px 16px;"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addRowModal"
+                      >
+                        <i class="fa fa-plus me-1"></i> Add
+                      </button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">Cash Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">Total Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
+
+                  <div class="card-body">
+                    <!-- Modal -->
+                    <div class="table-responsive">
+                      <table
+                        id="add-row"
+                        class="display table table-striped table-hover table-head-bg-info mt-4"
+                        style="border-radius:25px; overflow: hidden;"
+                      >
+                        <thead>
+                          <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th style="width: 10%">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>System Architect</td>
+                            <td>
+                              <img src="assets/img/profile.jpg" alt="Food Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" />
+                            </td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit" style="font-size:20px;"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-trash" style="font-size:18px;"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                        </tbody>
+
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -364,6 +438,7 @@
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap.min.js"></script>
 
+    
     <!-- jQuery Scrollbar -->
     <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
@@ -422,6 +497,25 @@
         lineColor: "#ffa534",
         fillColor: "rgba(255, 165, 52, .14)",
       });
+
+
+      $("#add-row").DataTable({
+          // pageLength: 3,
+        });
+
+        var action =
+          '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-trash"></i> </button> </div> </td>';
     </script>
+
+    <script>
+    function updateFileName() {
+      const input = document.getElementById('foodImageInput');
+      const label = document.getElementById('fileLabel');
+      if (input.files.length > 0) {
+        label.innerHTML = `<i class="fa fa-upload me-2"></i> ${input.files[0].name}`;
+      }
+    }
+    </script>
+
   </body>
 </html>

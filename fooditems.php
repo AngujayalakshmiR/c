@@ -10,7 +10,7 @@
     <link
       rel="icon"
       href="assets/img/KR_LOGO.png"
-      type="image/x-icon"
+      type="image/x-icon" style="border-radius: 50%;"
     />
 
     <!-- Fonts and icons -->
@@ -40,6 +40,22 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
+
+
+    <style>
+      /* For Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -114,47 +130,115 @@
 
         <div class="container">
           <div class="page-inner">
-            <div
-              class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
-            >
-              <div>
-                <h3 class="fw-bold mb-3">Dashboard</h3>
-              </div>
-              <!-- <div class="ms-md-auto py-2 py-md-0">
-                <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
-                <a href="#" class="btn btn-primary btn-round">Add Customer</a>
-              </div> -->
+            <div class="page-header">
+              <h3 class="fw-bold mb-3">MENU</h3>
+              <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                  <a href="index.php">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                  <a href="foodtypes.php">Available Food Items</a>
+                </li>
+              </ul>
             </div>
             <div class="row">
-            <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">RazorPay Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="d-flex align-items-center w-100 gap-3 flex-wrap">
+                      <h4 class="card-title me-auto mb-2 mb-md-0">Add Menu</h4>
+
+                      <!-- Food item dropdown -->
+                      <select class="form-select shadow-sm border-0" id="foodItemSelect" style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px; padding:10px;">
+                        <option selected disabled>Select food item</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Burger">Burger</option>
+                        <option value="Pasta">Pasta</option>
+                        <!-- Add more items as needed -->
+                      </select>
+
+                      <!-- Counter select dropdown -->
+                      <select class="form-select shadow-sm border-0" id="counterSelect" style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px; padding:10px;">
+                        <option selected disabled>Select counter</option>
+                        <option value="A">Counter A</option>
+                        <option value="B">Counter B</option>
+                      </select>
+
+                      <!-- Stylish quantity input -->
+                      <div class="quantity-wrapper d-flex align-items-center gap-2" style="background-color: #f1faff; padding: 6px 10px; border-radius: 8px;">
+                        <button class="btn btn-sm" onclick="adjustQuantity(-1)" style="background-color: rgb(0, 176, 234); color: white; font-weight: bold; border-radius: 50%; width: 32px; height: 32px;">-</button>
+                        <input type="number" id="foodQuantityInput" class="form-control text-center" value="1" min="1" style="width: 60px; border: none; background: transparent; font-weight: 600; color: #333;" />
+                        <button class="btn btn-sm" onclick="adjustQuantity(1)" style="background-color: rgb(0, 176, 234); color: white; font-weight: bold; border-radius: 50%; width: 32px; height: 32px;">+</button>
+                      </div>
+
+                      <!-- Add button -->
+                      <button
+                        class="btn btn-round shadow-sm"
+                        style="background-color: rgb(0, 176, 234); color: white; font-weight: 500; border-radius: 25px; padding: 8px 16px;"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addRowModal"
+                      >
+                        <i class="fa fa-plus me-1"></i> Add
+                      </button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">Cash Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">Total Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
+
+
+                  <div class="card-body">
+                    <!-- Modal -->
+                    <div class="table-responsive">
+                      <table
+                        id="add-row"
+                        class="display table table-striped table-hover table-head-bg-info mt-4"
+                        style="border-radius:25px; overflow: hidden;"
+                      >
+                        <thead>
+                          <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th style="width: 10%">Action</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>System Architect</td>
+                            <td>100
+                            </td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit" style="font-size:20px;"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-trash" style="font-size:18px;"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                        </tbody>
+
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -364,6 +448,7 @@
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap.min.js"></script>
 
+    
     <!-- jQuery Scrollbar -->
     <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
@@ -422,6 +507,27 @@
         lineColor: "#ffa534",
         fillColor: "rgba(255, 165, 52, .14)",
       });
+
+
+      $("#add-row").DataTable({
+          // pageLength: 3,
+        });
+
+        var action =
+          '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-trash"></i> </button> </div> </td>';
+
+
+
     </script>
+
+<script>
+  function adjustQuantity(change) {
+    const input = document.getElementById('foodQuantityInput');
+    let value = parseInt(input.value) || 1;
+    value = Math.max(1, value + change);
+    input.value = value;
+  }
+</script>
+
   </body>
 </html>

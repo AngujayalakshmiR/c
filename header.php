@@ -27,7 +27,7 @@
         <li class="nav-item <?= ($currentPage == 'foodtypes.php') ? 'active' : '' ?>">
           <a href="foodtypes.php">
             <i class="fas fa-cart-plus"></i>
-            <p>New Food Type</p>
+            <p>New Food Items</p>
           </a>
         </li>
         <li class="nav-item <?= ($currentPage == 'fooditems.php') ? 'active' : '' ?>">
@@ -40,6 +40,12 @@
           <a href="cashorders.php">
             <i class="fas fa-money-check-alt"></i>
             <p>Cash Orders</p>
+          </a>
+        </li>
+        <li class="nav-item <?= ($currentPage == 'changepassword.php') ? 'active' : '' ?>">
+          <a href="changepassword.php">
+            <i class="fas fa-lock"></i>
+            <p>Change Password</p>
           </a>
         </li>
 

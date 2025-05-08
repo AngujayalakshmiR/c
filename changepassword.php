@@ -119,74 +119,96 @@
               class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
             >
               <div>
-                <h3 class="fw-bold mb-3">Dashboard</h3>
+                <h3 class="fw-bold mb-3">CHANGE PASSWORD
+                <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                  <a href="index.php">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                  <a href="changepassword.php">Change Password</a>
+                </li>
+              </ul></h3>
               </div>
-              <!-- <div class="ms-md-auto py-2 py-md-0">
-                <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
-                <a href="#" class="btn btn-primary btn-round">Add Customer</a>
-              </div> -->
+              
             </div>
             <div class="row">
-            <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">RazorPay Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
+                <div class="col-md-12">
+                    <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                        <i class="fas fa-key"></i> &nbsp;&nbsp;Change Password
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">Cash Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
+                    <div class="card-body">
+                        <form id="changePasswordForm">
+                        <div class="row">
+                            <!-- Select Dashboard -->
+                            <div class="col-md-4">
+  <div class="form-group">
+    <label for="dashboard">Select Dashboard</label>
+    <select class="form-control" id="dashboard" name="dashboard">
+      <option value="counter_a">Counter A</option>
+      <option value="counter_b">Counter B</option>
+      <option value="main_dashboard">Main Dashboard</option>
+    </select>
+  </div>
+</div>
+
+
+                            <!-- Old Password -->
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="oldPassword">Old Password</label>
+                                <div class="input-group">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="oldPassword"
+                                    name="oldPassword"
+                                    placeholder="Enter Old Password"
+                                />
+                                <span class="input-group-text" id="oldPasswordEye" style="cursor: pointer;">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- New Password -->
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <div class="input-group">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="newPassword"
+                                    name="newPassword"
+                                    placeholder="Enter New Password"
+                                />
+                                <span class="input-group-text" id="newPasswordEye" style="cursor: pointer;">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="text-end mt-3">
+                            <button type="submit" class="btn" style="border-radius:25px;background-color: rgb(0, 176, 234); color: white;">Change Password</button>
+                        </div>
+                        </form>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
-                  <div class="card-body bubble-shadow">
-                    <h1>188</h1>
-                    <h5 class="op-8">Total Orders</h5>
-                    <div class="pull-right">
-                      <h3 class="fw-bold op-8">25%</h3>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title">Counter A</div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-container">
-                      <canvas id="doughnutChart1" style="width: 50%; height: 50%"></canvas>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title">Counter B</div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-container">
-                      <canvas id="doughnutChart2" style="width: 50%; height: 50%"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
 
 
           </div>
@@ -235,87 +257,42 @@
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
     <script src="assets/js/setting-demo.js"></script>
     <script src="assets/js/demo.js"></script>
-    <script src="assets/js/setting-demo2.js"></script>
-
-    <script>
-      $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#177dff",
-        fillColor: "rgba(23, 125, 255, 0.14)",
-      });
-
-      $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#f3545d",
-        fillColor: "rgba(243, 84, 93, .14)",
-      });
-
-      $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#ffa534",
-        fillColor: "rgba(255, 165, 52, .14)",
-      });
-    </script>
+    
 <script>
-  const doughnutDataA = {
-    datasets: [{
-      data: [40, 10], // 40 served, 10 pending
-      backgroundColor: ["#28a745", "#dc3545"], // green and red
-    }],
-    labels: ["Order Served", "Order Pending"],
-  };
-
-  const doughnutDataB = {
-    datasets: [{
-      data: [25, 15], // example values
-      backgroundColor: ["#28a745", "#dc3545"], // green and red
-    }],
-    labels: ["Order Served", "Order Pending"],
-  };
-
-  const doughnutOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "bottom",
-      }
-    },
-    layout: {
-      padding: {
-        left: 20,
-        right: 20,
-        top: 20,
-        bottom: 20,
-      },
-    },
-  };
-
-  const ctx1 = document.getElementById("doughnutChart1").getContext("2d");
-  const ctx2 = document.getElementById("doughnutChart2").getContext("2d");
-
-  new Chart(ctx1, {
-    type: "doughnut",
-    data: doughnutDataA,
-    options: doughnutOptions,
+  // Show/hide password functionality
+  document.getElementById("oldPasswordEye").addEventListener("click", function () {
+    const oldPasswordInput = document.getElementById("oldPassword");
+    if (oldPasswordInput.type === "password") {
+      oldPasswordInput.type = "text";
+    } else {
+      oldPasswordInput.type = "password";
+    }
   });
 
-  new Chart(ctx2, {
-    type: "doughnut",
-    data: doughnutDataB,
-    options: doughnutOptions,
+  document.getElementById("newPasswordEye").addEventListener("click", function () {
+    const newPasswordInput = document.getElementById("newPassword");
+    if (newPasswordInput.type === "password") {
+      newPasswordInput.type = "text";
+    } else {
+      newPasswordInput.type = "password";
+    }
+  });
+
+  // Display old password based on selected dashboard
+  document.getElementById("dashboard").addEventListener("change", function () {
+    const dashboard = this.value;
+    const oldPasswordInput = document.getElementById("oldPassword");
+
+    // Here, add logic to fetch the old password from your backend based on the selected dashboard.
+    // For now, I'm just adding dummy data for demonstration purposes.
+    if (dashboard === "counter_a") {
+      oldPasswordInput.value = "counter_a_password"; // Replace with actual data
+    } else if (dashboard === "counter_b") {
+      oldPasswordInput.value = "counter_b_password"; // Replace with actual data
+    } else {
+      oldPasswordInput.value = ""; // Clear the input for Main Dashboard
+    }
   });
 </script>
-
-
   </body>
 </html>
