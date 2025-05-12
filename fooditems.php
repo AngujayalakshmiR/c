@@ -200,7 +200,7 @@ input[type="number"] {
                         <thead>
                           <tr>
                             <th>S.No</th>
-                            <th>Name</th>
+                            <th>Food Item (s)</th>
                             <th>Quantity</th>
                             <th style="width: 10%">Action</th>
                           </tr>
