@@ -11,7 +11,7 @@
 
   <style>
     body {
-      background-color:rgb(255, 103, 48);
+      background-color:rgb(0, 176, 234);
     }
 
     .cart-container,
@@ -35,7 +35,7 @@
       left: 0;
       height: 0.25rem;
       width: 100%;
-      background: linear-gradient(90deg, rgb(255, 103, 48), color-mix(in srgb, rgb(255, 103, 48), transparent 50%));
+      background: linear-gradient(90deg, rgb(0, 176, 234), color-mix(in srgb, rgb(0, 176, 234), transparent 50%));
     }
 
 @media (max-width: 460px) {
@@ -87,7 +87,7 @@
   align-items: center;
   border-radius: 2rem;
   overflow: hidden;
-  background: color-mix(in srgb, rgba(255, 103, 48, 0.85), transparent 50%);
+  background: color-mix(in srgb, rgb(112, 219, 255), transparent 50%);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
   height: 2.25rem;
@@ -99,7 +99,7 @@
   padding: 0.4rem 0.4rem;
   font-size: 1rem;
   color: #fff;
-  background-color: rgba(255, 103, 48, 0.85);
+  background-color: rgb(0, 176, 234);
 }
 
 .quantity-control::before {
@@ -109,7 +109,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: color-mix(in srgb, rgba(255, 103, 48, 0.85), transparent 50%);
+  background-color: color-mix(in srgb, rgb(0, 176, 234), transparent 50%);
   transform: scale(0);
   border-radius: 50%;
   transition: transform 0.3s ease;
@@ -129,16 +129,16 @@ small {
   color: #fff;
   align-items: center;
   padding: 0.25rem 0.5rem;
-  background-color: color-mix(in srgb, rgb(255, 103, 48), transparent 20%);
+  background-color: color-mix(in srgb, rgb(0, 176, 234), transparent 20%);
   border-radius: 0.375rem;
-  border: 1px solid color-mix(in srgb, rgb(255, 103, 48), transparent 90%);
+  border: 1px solid color-mix(in srgb, rgb(0, 176, 234), transparent 90%);
   margin-bottom: 0.55rem;
   font-size: 0.8125rem;
 }
 
 .price {
   position: relative;
-  color: rgb(255, 103, 48);
+  color: rgb(0, 176, 234);
   font-weight: 700;
   font-size: 1.125rem;
   text-align: center;
@@ -152,7 +152,7 @@ small {
   transform: translateX(-50%);
   width: 50%;
   height: 2px;
-  background: linear-gradient(90deg, rgb(255, 103, 48), transparent);
+  background: linear-gradient(90deg, rgb(0, 176, 234), transparent);
   border-radius: 1px;
 }
 
@@ -251,14 +251,6 @@ small {
   gap: 0.5rem; /* spacing between control and price */
 }
 
-@media (max-width: 460px) {
- 
-}
-
-
-
-
-
 
     .order-summary {
       position: relative;
@@ -275,7 +267,7 @@ small {
       left: 0;
       height: .25rem;
       width: 100%;
-      background: linear-gradient(90deg, color-mix(in srgb, rgb(255, 103, 48), transparent 50%), rgb(255, 103, 48));
+      background: linear-gradient(90deg, color-mix(in srgb, rgb(0, 176, 234), transparent 50%), rgb(0, 176, 234));
       border-top-left-radius: 0.75rem;
       border-top-right-radius: 0.75rem;
       box-sizing: border-box;
@@ -290,7 +282,7 @@ small {
 
     .product-row:hover {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-      border-color: color-mix(in srgb, rgb(255, 103, 48), transparent 70%);
+      border-color: color-mix(in srgb, rgb(0, 176, 234), transparent 70%);
     }
 
     /* Remove Button with Trash Icon */
@@ -310,7 +302,7 @@ small {
     }
 
     .remove-btn:hover {
-      color: rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
     }
 
     .remove-btn i {
@@ -320,7 +312,7 @@ small {
 
     .remove-btn:hover i {
       transform: rotate(15deg);
-      color: rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
     }
 
    
@@ -338,13 +330,13 @@ small {
 
     /* Update button */
     .btn-update {
-      color: rgb(255, 103, 48);
-      border: 1px solid rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
+      border: 1px solid rgb(0, 176, 234);
       background-color: transparent;
     }
 
     .btn-update:hover {
-      background-color: rgb(255, 103, 48);
+      background-color: rgb(0, 176, 234);
       color: #fff;
     }
 
@@ -354,13 +346,13 @@ small {
 
     /* Clear button */
     .btn-clear {
-      color: rgb(255, 103, 48);
-      border: 1px solid rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
+      border: 1px solid rgb(0, 176, 234);
       background-color: transparent;
     }
 
     .btn-clear:hover {
-      background-color: rgb(255, 103, 48);
+      background-color: rgb(0, 176, 234);
       color: #fff;
     }
 
@@ -379,7 +371,7 @@ small {
 
     /* Define color variables if not already */
     :root {
-      --accent-color: rgb(255, 103, 48);
+      --accent-color: rgb(0, 176, 234);
       --background-color: #ffffff;
       --default-color: #d0d0d0;
       --heading-color: #2d465e;
@@ -394,14 +386,14 @@ small {
       padding: 1.25rem;
       border-radius: 0.75rem;
       background: linear-gradient(145deg,
-          color-mix(in srgb, rgb(255, 103, 48), transparent 75%),
+          color-mix(in srgb, rgb(0, 129, 172), transparent 75%),
           color-mix(in srgb, var(--background-color), transparent 95%));
-      border: 2px solid color-mix(in srgb, rgb(255, 103, 48), transparent 92%);
+      border: 2px solid color-mix(in srgb, rgb(4, 127, 168), transparent 92%);
     }
 
     .form-check-input:checked {
-      background-color: rgb(255, 103, 48);
-      border-color: rgb(255, 103, 48);
+      background-color: rgb(0, 176, 234);
+      border-color: rgb(0, 176, 234);
     }
 
     /* Left Label */
@@ -421,7 +413,7 @@ small {
 
     .hero-section {
       position: relative;
-      background-color: rgba(255, 103, 48, 0.9);
+      background-color: rgb(0, 176, 234);
       color: white;
       width: 100%;
       overflow: hidden;
@@ -495,14 +487,14 @@ small {
       }
 
       .hero-section {
-        background-color: rgb(255, 103, 48);
+        background-color: rgb(0, 176, 234);
         padding: 2rem 1rem;
       }
 
       .hero-content {
         background-color: #fff;
         color: #333;
-        border-bottom: 5px solid rgb(255, 103, 48);
+        border-bottom: 5px solid rgb(0, 176, 234);
         border-radius: 0.5rem;
         padding: 2rem 1rem;
       }
@@ -512,12 +504,12 @@ small {
       }
 
       .hero-title {
-        color: rgb(255, 103, 48);
+        color: rgb(0, 176, 234);
       }
 
       .hero-subtitle {
         font-size: 1rem;
-        color: rgb(255, 103, 48);
+        color: rgb(0, 176, 234);
       }
     }
 
@@ -544,12 +536,12 @@ small {
     }
 
     .btn-checkout {
-      background-color: rgb(255, 103, 48);
+      background-color: rgb(0, 176, 234);
       color: #fff;
     }
 
     .btn-checkout:hover {
-      background-color: rgb(255, 103, 48);
+      background-color: rgb(0, 176, 234);
       color: #fff;
     }
 
@@ -577,13 +569,9 @@ small {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      color: rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
     }
 
-    .footer-text {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
 
     .custom-footer {
       background-color: #fff;
@@ -609,7 +597,7 @@ small {
 
     .footer-icons-random i {
       position: absolute;
-      color: rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
       font-size: 1.5rem;
       opacity: 0.3;
       transform: rotate(var(--rotate));
@@ -668,7 +656,7 @@ small {
       font-size: 1.30rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
-      color: rgb(255, 103, 48);
+      color: rgb(0, 176, 234);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -681,7 +669,7 @@ small {
 
     /* Footer Text */
     .footer-text {
-      font-size: .8rem;
+      font-size: .9rem;
       color: #333;
       line-height: 1.5;
       position: relative;
@@ -727,7 +715,7 @@ small {
   font-weight: 600;
   font-size: 0.7rem; /* reduced size */
   color: #fff;
-  background-color: rgb(255, 103, 48);
+  background-color: rgb(0, 176, 234);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -739,7 +727,7 @@ small {
   position: absolute;
   top: 0.4rem;
   left: 0.4rem;
-  background-color: rgb(255, 103, 48);
+  background-color: rgb(0, 176, 234);
   color: #fff;
   border-radius: 50%;
   width: 24px;
@@ -757,7 +745,7 @@ small {
   position: absolute;
   top: 0.4rem;
   right: 0.4rem;
-  background-color: rgb(255, 103, 48);
+  background-color: rgb(0, 176, 234);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -772,7 +760,7 @@ small {
 }
 
 .add-btn:hover {
-  background-color: rgb(230, 90, 40);
+  background-color: rgb(0, 176, 234);
 }
 
 /* 10px spacing between cards */
@@ -864,8 +852,10 @@ small {
   .summary-value{
     font-size:1.2rem;
   }
+  .quote{
+    font-size:1.1rem;
+  }
 }
-
 
 
   </style>
@@ -874,7 +864,7 @@ small {
 <body>
   <div class="hero-section">
     <div class="hero-content container text-white py-2 text-center">
-      <img src="assets/img/trayo_logo_with_bg.png" style="border-radius: 50%;" alt="Logo" class="hero-logo">
+      <img src="assets/img/blue-logo.png" style="border-radius: 50%;" alt="Logo" class="hero-logo">
       <h1 class="hero-title">Welcome to MKCE Trayo</h1>
       <p class="hero-subtitle">"Where Technology Serves Taste."</p>
     </div>
@@ -1193,7 +1183,7 @@ small {
 
     <div class="footer-quote">
       <i class="fas fa-quote-left quote-icon"></i>
-      <span>Have Food. Have Fun.</span>
+      <div class="quote">Have Food. Have Fun.</div>
       <i class="fas fa-quote-right quote-icon"></i>
     </div>
 
