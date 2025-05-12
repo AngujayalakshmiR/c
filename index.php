@@ -38,6 +38,12 @@
       background: linear-gradient(90deg, rgb(255, 103, 48), color-mix(in srgb, rgb(255, 103, 48), transparent 50%));
     }
 
+@media (max-width: 460px) {
+  .cart-container {
+    padding: 10px;
+  }
+}
+
     .product-header {
       font-weight: bold;
       border-bottom: 1px solid color-mix(in srgb, #212529, transparent 90%);
@@ -90,7 +96,7 @@
 .quantity-control button {
   background: none;
   border: none;
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.4rem;
   font-size: 1rem;
   color: #fff;
   background-color: rgba(255, 103, 48, 0.85);
@@ -151,19 +157,8 @@ small {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 992px) { /* Tablet view */
-  .quantity-control {
-    height: 2rem;
-  }
+@media (max-width: 1292px) { /* Tablet view */
 
-  .quantity-control button {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  .quantity-control input {
-    width: 35px;
-  }
 
   .price {
     font-size: 1rem;
@@ -179,19 +174,15 @@ small {
 }
 
 @media (max-width: 768px) { /* Mobile view */
-  .quantity-control {
-    height: 1.75rem;
+  .product-row {
+    padding:5px;
   }
-
-  .quantity-control button {
-    padding: 0.3rem 0.5rem;
-    font-size: 0.85rem;
+.cart-container {
+    padding: 20px;
   }
-
-  .quantity-control input {
-    width: 30px;
-  }
-
+.lorem-font {
+  font-size:.9rem;
+}
   .price {
     font-size: 0.9rem;
   }
@@ -204,55 +195,28 @@ small {
     font-size: 0.85rem;
   }
 }
+@media (max-width: 576px) {
+.lorem-font {
+  font-size:.75rem;
+}
+}
+@media (max-width: 460px) {
+
+}
+@media (max-width: 460px) {
+
+}
+.quantity-control button,
+.quantity-control input {
+  min-width: 10px;
+}
 
 /* Additional Adjustments for screens between 290px and 460px */
 @media (max-width: 460px) { /* Small mobile screens */
-  .quantity-control {
-    height: 1.5rem; /* Further reduce height for very small screens */
-  }
-
-  .quantity-control button {
-    padding: 0.2rem 0.4rem; /* Even smaller padding */
-    font-size: 0.75rem; /* Smaller font size for buttons */
-  }
-
-  .quantity-control input {
-    width: 25px; /* Even smaller input field */
-  }
-
-  .price {
-    font-size: 0.85rem; /* Smaller font size for price */
-  }
-
-  .price::after {
-    width: 30%; /* Further reduced underline width */
-  }
-
-  .col-md-2, .col-3 {
-    font-size: 0.75rem; /* Reduce font size for very small screens */
-  }
-
-  /* Add space between elements to avoid overlap */
-  .col-md-2, .col-3, .quantity-control, .price {
-    margin-bottom: 0.25rem; /* Ensure there is space between elements */
-  }
-  .product-row{
-    padding: 0px;
-  }
-  .item-img{
-    width: 70px;
-    height: 70px;
-  }
+  
   .lorem-font {
     font-size: .9rem;
-  }
-  .price-label {
-    display: none;
-  }
-  .headingstyle {
-      font-family: 'Nunito', sans-serif;
-      font-size: 0.65rem;
-}}
+  }}
 
 @media (max-width: 290px) { /* Extremely small screens */
   .quantity-control {
@@ -288,18 +252,7 @@ small {
 }
 
 @media (max-width: 460px) {
-  .stack-on-mobile {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stack-on-mobile .quantity-control {
-    margin-bottom: 0.5rem; /* spacing below quantity */
-  }
-
-  .stack-on-mobile .price {
-    font-size: 1rem; /* optionally adjust for small screens */
-  }
+ 
 }
 
 
@@ -843,6 +796,75 @@ small {
     display: inline;
   }
 }
+@media (max-width: 460px) {
+  .headinigstyle{
+    font-size:0.8rem;
+  }
+  .remove-btn{
+    font-size:.7rem;
+  }
+  .btn-custom{
+    font-size:.7rem;
+  }
+  .btn-customa{
+    font-size:.7rem;
+  }
+  .quantity-control{
+    height:25px;
+    width:65px;
+  }
+      .col-md-2, .col-3,.col-7 {
+        font-size:.7rem;
+      }
+  .lorem-font{
+    font-size: .85rem; }
+    small{
+      font-size:.75rem;
+    }
+  .product-row {
+    position: relative;
+    flex-wrap: nowrap;
+    padding-right: 100px; /* leave space for price/qty to float right */
+  }
+
+  .product-row .col-md-2.col-3 {
+    width: auto;
+    flex: none;
+    position: absolute;
+    right: 10px;
+    background: white; /* optional: better visibility */
+  }
+
+  /* Quantity control goes to the top right */
+  .product-row .col-md-2.col-3:nth-of-type(2) {
+    top: 10px;
+  }
+
+  /* Price goes to the bottom right */
+  .product-row .col-md-2.col-3:nth-of-type(3) {
+    bottom: 10px;
+  }
+
+  .product-row .col-md-2.col-3 .quantity-control {
+    flex-direction: row;
+  }
+
+  .product-row .price {
+    font-size: 0.9rem;
+  }
+  .summary-title{
+    font-size:1rem;
+  }
+  span{
+    font-size:.75rem;
+  }
+  .form-check-label{
+    font-size:.85rem;
+  }
+  .summary-value{
+    font-size:1.2rem;
+  }
+}
 
 
 
@@ -1027,7 +1049,7 @@ small {
 
     <!-- Item 1 -->
     <div class="row product-row align-items-center text-center">
-      <div class="col-md-8 col-7 d-flex text-start align-items-center">
+      <div class="col-md-8 col-6 d-flex text-start align-items-center">
         <img src="assets/img/briyani.jpeg" class="item-img me-3" style="border:  1px solid color-mix(in srgb, #212529, transparent 90%);" alt="Product">
         <div>
           <div class="lorem-font">Lorem ipsum dolor</div>
@@ -1036,7 +1058,7 @@ small {
           <a href="#" class="remove-btn"><i class="bi bi-trash"></i> Remove</a> 
         </div>
       </div>
-      <div class="col-md-2 col-6 d-flex justify-content-center">
+      <div class="col-md-2 col-3 d-flex justify-content-center">
   <div class="quantity-control">
     <button>-</button>
     <input type="text" value="1">
@@ -1044,7 +1066,7 @@ small {
   </div>
 </div>
 
-<div class="col-md-2 col-6 d-flex justify-content-center align-items-center .stack-on-mobile">
+<div class="col-md-2 col-3 d-flex justify-content-center align-items-center stack-on-mobile">
   <div class="price ">$49.99</div>
 </div>
 
@@ -1053,7 +1075,7 @@ small {
 
     <!-- Item 2 -->
     <div class="row product-row align-items-center text-center">
-      <div class="col-md-8 col-7 d-flex text-start align-items-center">
+      <div class="col-md-8 col-6 d-flex text-start align-items-center">
         <img src="assets/img/parotta.jpeg" class="item-img me-3" style="border:  1px solid color-mix(in srgb, #212529, transparent 90%);" alt="Product">
         <div>
           <div class="lorem-font">Consectetur elit</div>
@@ -1062,7 +1084,7 @@ small {
           <a href="#" class="remove-btn"><i class="bi bi-trash"></i> Remove</a>
         </div>
       </div>
-      <div class="col-md-2 col-6 d-flex justify-content-center ">
+      <div class="col-md-2 col-3 d-flex justify-content-center ">
   <div class="quantity-control">
     <button>-</button>
     <input type="text" value="1">
@@ -1070,7 +1092,7 @@ small {
   </div>
 </div>
 
-<div class="col-md-2 col-6 d-flex justify-content-center align-items-center .stack-on-mobile">
+<div class="col-md-2 col-3 d-flex justify-content-center align-items-center stack-on-mobile">
   <div class="price">$49.99</div>
 </div>
 
@@ -1079,7 +1101,7 @@ small {
 
     <!-- Item 3 -->
     <div class="row product-row align-items-center text-center">
-      <div class="col-md-8 col-7 d-flex text-start align-items-center">
+      <div class="col-md-8 col-6 d-flex text-start align-items-center">
         <img src="assets/img/samosa.jpg" class="item-img me-3" style="border:  1px solid color-mix(in srgb, #212529, transparent 90%);" alt="Product">
         <div>
           <div class="lorem-font">Sed do eiusmod</div>
@@ -1088,7 +1110,7 @@ small {
           <a href="#" class="remove-btn"><i class="bi bi-trash"></i> Remove</a>
         </div>
       </div>
-      <div class="col-md-2 col-6 d-flex justify-content-center">
+      <div class="col-md-2 col-3 d-flex justify-content-center">
   <div class="quantity-control">
     <button>-</button>
     <input type="text" value="1">
@@ -1096,7 +1118,7 @@ small {
   </div>
 </div>
 
-<div class="col-md-2 col-6 d-flex justify-content-center align-items-center .stack-on-mobile">
+<div class="col-md-2 col-3 d-flex justify-content-center align-items-center stack-on-mobile">
   <div class="price">$49.99</div>
 </div>
 
