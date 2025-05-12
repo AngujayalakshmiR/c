@@ -145,64 +145,135 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="changePasswordForm">
-                        <div class="row">
-                            <!-- Select Dashboard -->
-                            <div class="col-md-4">
-  <div class="form-group">
-    <label for="dashboard">Select Dashboard</label>
-    <select class="form-control" id="dashboard" name="dashboard">
-      <option value="counter_a">Counter A</option>
-      <option value="counter_b">Counter B</option>
-      <option value="main_dashboard">Main Dashboard</option>
-    </select>
+                    <form id="changePasswordForm">
+  <div class="row">
+    <!-- Select Dashboard -->
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="dashboard">Select Dashboard</label>
+        <select class="form-control custom-select" id="dashboard" name="dashboard">
+          <option value="counter_a">Counter A</option>
+          <option value="counter_b">Counter B</option>
+          <option value="main_dashboard">Main Dashboard</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Old Password -->
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="oldPassword">Old Password</label>
+        <div class="input-group">
+          <input
+            type="password"
+            class="form-control custom-input"
+            id="oldPassword"
+            name="oldPassword"
+            placeholder="Enter Old Password"
+          />
+          <span class="input-group-text eye-icon" id="oldPasswordEye">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Password -->
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="newPassword">New Password</label>
+        <div class="input-group">
+          <input
+            type="password"
+            class="form-control custom-input"
+            id="newPassword"
+            name="newPassword"
+            placeholder="Enter New Password"
+          />
+          <span class="input-group-text eye-icon" id="newPasswordEye">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+  <div class="text-end mt-3">
+    <button
+      type="submit"
+      class="btn custom-submit-btn"
+    >Change Password</button>
+  </div>
+</form>
+
+<style>
+/* Form container padding (if needed) */
+#changePasswordForm {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Label styling */
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Custom Select Dropdown */
+.custom-select {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
 
 
-                            <!-- Old Password -->
-                            <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="oldPassword">Old Password</label>
-                                <div class="input-group">
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="oldPassword"
-                                    name="oldPassword"
-                                    placeholder="Enter Old Password"
-                                />
-                                <span class="input-group-text" id="oldPasswordEye" style="cursor: pointer;">
-                                    <i class="fas fa-eye"></i>
-                                </span>
-                                </div>
-                            </div>
-                            </div>
 
-                            <!-- New Password -->
-                            <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="newPassword">New Password</label>
-                                <div class="input-group">
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="newPassword"
-                                    name="newPassword"
-                                    placeholder="Enter New Password"
-                                />
-                                <span class="input-group-text" id="newPasswordEye" style="cursor: pointer;">
-                                    <i class="fas fa-eye"></i>
-                                </span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+/* Custom Input */
+.custom-input {
+  border-radius: 10px 0 0 10px;
+  padding: 10px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
 
-                        <div class="text-end mt-3">
-                            <button type="submit" class="btn" style="border-radius:25px;background-color: rgb(0, 176, 234); color: white;">Change Password</button>
-                        </div>
-                        </form>
+
+/* Eye Icon */
+.eye-icon {
+  background-color: #f8f9fa;
+  border: 2px solid #ccc;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  transition: background 0.3s;
+}
+
+.eye-icon:hover {
+  background-color: #e1f5fe;
+}
+
+/* Submit Button */
+.custom-submit-btn {
+  border-radius: 25px;
+  background-color: rgb(0, 176, 234);
+  color: white;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.custom-submit-btn:hover {
+  background-color: #00a6d6;
+}
+select#dashboard option {
+  background-color: #f0f8ff; /* light blue background */
+  color: #333;               /* dark gray text */
+  padding: 10px;
+  font-size: 16px;
+}
+
+</style>
+
                     </div>
                     </div>
                 </div>
@@ -294,5 +365,7 @@
     }
   });
 </script>
+
+
   </body>
 </html>
