@@ -4,7 +4,7 @@
 <div class="sidebar" data-background-color="dark">
   <div class="sidebar-logo">
     <div class="logo-header" data-background-color="dark">
-      <a href="index.html" class="logo">
+      <a href="#" class="logo">
         <img src="assets/img/MKCE_FULL_LOGO.png" alt="navbar brand" class="navbar-brand" height="80" />
       </a>
       <div class="nav-toggle">
