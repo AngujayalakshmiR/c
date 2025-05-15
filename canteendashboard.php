@@ -40,6 +40,21 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #00a6d6;
+        color: #fff;
+        transition: background-color 0.3s ease;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -49,7 +64,7 @@
       <!-- End Sidebar -->
 
       <div class="main-panel">
-        <div class="main-header">
+        <div class="main-header" data-aos="fade-down" data-aos-delay="100">
           <div class="main-header-logo">
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
@@ -128,7 +143,7 @@
             </div>
             <div class="row">
             <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
+                <div class="card card-secondary bg-secondary-gradient" data-aos="fade-up" data-aos-delay="200">
                   <div class="card-body bubble-shadow">
                     <h1>188</h1>
                     <h5 class="op-8">RazorPay Orders</h5>
@@ -139,7 +154,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
+                <div class="card card-secondary bg-secondary-gradient" data-aos="fade-up" data-aos-delay="300">
                   <div class="card-body bubble-shadow">
                     <h1>188</h1>
                     <h5 class="op-8">Cash Orders</h5>
@@ -150,7 +165,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="card card-secondary bg-secondary-gradient">
+                <div class="card card-secondary bg-secondary-gradient" data-aos="fade-up" data-aos-delay="400">
                   <div class="card-body bubble-shadow">
                     <h1>188</h1>
                     <h5 class="op-8">Total Orders</h5>
@@ -163,7 +178,7 @@
             </div>
             <div class="row">
               <div class="col-md-6">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
                   <div class="card-header">
                     <div class="card-title">Counter A</div>
                   </div>
@@ -175,7 +190,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
                   <div class="card-header">
                     <div class="card-title">Counter B</div>
                   </div>
@@ -316,6 +331,10 @@
   });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
   </body>
 </html>

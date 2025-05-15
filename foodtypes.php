@@ -40,6 +40,21 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #00a6d6;
+        color: #fff;
+        transition: background-color 0.3s ease;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -48,7 +63,7 @@
       <!-- End Sidebar -->
 
       <div class="main-panel">
-        <div class="main-header">
+        <div class="main-header" data-aos="fade-down" data-aos-delay="100">
           <div class="main-header-logo">
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
@@ -132,7 +147,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
                   <div class="card-header">
                     <div class="d-flex align-items-center w-100 gap-3 flex-wrap">
                       <h4 class="card-title me-auto mb-2 mb-md-0">Add Food</h4>
@@ -326,6 +341,11 @@
         label.innerHTML = `<i class="fa fa-upload me-2"></i> ${input.files[0].name}`;
       }
     }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 
   </body>
