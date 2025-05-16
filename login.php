@@ -524,13 +524,13 @@
                     <h1>MKCE - Trayo Login</h1>
                 </div>
 
-                <form action="#" method="POST">
+                <form action="#" id="loginForm" method="POST" onsubmit="return validateLogin()">
                     <div class="form-group">
                         <label for="dashboard">Select Dashboard</label>
-                        <select class="form-control custom-select" id="dashboard" name="dashboard">
-                          <option value="counter_a">Counter A</option>
-                          <option value="counter_b">Counter B</option>
-                          <option value="main_dashboard">Main Dashboard</option>
+                        <select class="form-control custom-select" id="username" name="username">
+                          <option value="countera">Counter A</option>
+                          <option value="counterb">Counter B</option>
+                          <option value="dashboard">Main Dashboard</option>
                         </select>
                     </div>
                     
@@ -562,5 +562,24 @@
             this.classList.toggle('active');
         });
     </script>
+    <script>
+function validateLogin() {
+    const username = document.getElementById("username").value.trim().toLowerCase();
+    const password = document.getElementById("password").value;
+
+    if (username === "countera" && password === "123") {
+        window.location.href = "foodcounter_a.php";
+    } else if (username === "counterb" && password === "123") {
+        window.location.href = "foodcounter_b.php"; // You may want to replace "123" with a valid URL
+    } else if (username === "dashboard" && password === "123") {
+        window.location.href = "canteendashboard.php";
+    } else {
+        alert("Invalid username or password!");
+    }
+
+    return false; // prevent form from submitting traditionally
+}
+</script>
+
 </body>
 </html>

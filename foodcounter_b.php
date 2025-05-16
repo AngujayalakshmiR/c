@@ -273,7 +273,7 @@ overflow-x: hidden;
                 </li>
 
                 <li class="nav-item topbar-user dropdown hidden-caret">
-                 <a class="dropdown-item" href="#" style="font-size: larger;color:#fff;"><i class="
+                 <a class="dropdown-item" href="login.php" style="font-size: larger;color:#fff;"><i class="
                         fas fa-sign-out-alt" style="font-size: medium;"></i>&nbsp; Logout</a>
                 </li>
               </ul>
@@ -299,7 +299,7 @@ fas fa-concierge-bell"></i>
           <i class="icon-arrow-right"></i>
         </li>
         <li class="nav-item">
-          <a href="foodtypes.php">Counter A</a>
+          <a href="foodtypes.php">Counter B</a>
         </li>
         <li class="separator">
           <i class="icon-arrow-right"></i>

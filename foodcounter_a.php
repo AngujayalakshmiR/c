@@ -12,6 +12,7 @@
       href="assets/img/KR_LOGO.png"
       type="image/x-icon" style="border-radius: 50%;"
     />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
@@ -40,8 +41,8 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
+<!-- Add this in your <head> if not already -->
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <style>
       /* For Chrome, Safari, Edge, Opera */
@@ -56,28 +57,168 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
+ .dataTables_filter {
+    display: none;
+  }
 
-    .btn:hover {
-      background-color: #00a6d6;
-      color: #fff;
-      transition: background-color 0.3s ease;
-    }
+.table-white {
+  background-color: #ffffff;
+}
 
+.table-gray {
+  background-color: #f8f9fa;
+}
+.food-badge {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 4px 10px;
+    margin: 3px 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+  table th, table td {
+      vertical-align: middle;
+    }
+    .table thead th {
+      font-size:12px;
+      text-transform: capitalize;
+    }
+    .table-custom {
+      table-layout: fixed;
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .col-token { width: 15%; }
+    .col-food { width: 30%; }
+    .col-parcel { width: 13%; }
+    .col-delivery { width: 12%; }
+    .col-call { width: 12%; }
+    .food-item {
+      background-color: rgb(207, 231, 255);
+      border-radius:5px;
+      border: 2px solid rgb(43, 139, 235);
+      padding: 4px 5px;
+      margin-top:2px;
+    }
+    .food-item {
+display: inline-block;
+width: auto;
+max-width: 100%;
+}
+    @media (max-width: 768px) {
+.table-custom,
+.table-responsive table {
+table-layout: auto !important;
+}
+
+.col-token,
+.col-food,
+.col-parcel,
+.col-call,
+.col-delivery {
+width: auto !important;
+}
+}
+.table-responsive {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+body, .container, .row {
+overflow-x: hidden;
+}
     </style>
+    <style>
+.order-count {
+  background-color: #000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+}
+
+
+
+  /* Container for all token notifications, fixed top-right corner */
+  #token-notifications {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    z-index: 1050; /* above most elements */
+  }
+
+  /* Each notification box */
+  .token-notification {
+    background-color:rgba(217, 189, 97, 0.9); /* Bootstrap alert-success bg */
+    color:rgb(255, 255, 255); /* Bootstrap alert-success text */
+    border: 2px solid rgb(167, 158, 0);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .token-text {
+    flex-grow: 1;
+    font-size:14px;
+    margin-right: 8px;
+  }
+
+  .btn-wrong {
+    border: none;
+    background-color:rgba(217, 189, 97, 0.9);
+    color:white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+
+</style>
   </head>
   <body>
     <div class="wrapper">
       <!-- Sidebar -->
-      <?php include('header.php'); ?>
+      <div class="sidebar" data-background-color="dark">
+  <div class="sidebar-logo">
+    <div class="logo-header" data-background-color="dark">
+      <a href="#" class="logo">
+        <img src="assets/img/MKCE_FULL_LOGO.png" alt="navbar brand" class="navbar-brand" height="80" />
+      </a>
+      <div class="nav-toggle">
+        <button class="btn btn-toggle toggle-sidebar"><i class="gg-menu-right"></i></button>
+        <button class="btn btn-toggle sidenav-toggler"><i class="gg-menu-left"></i></button>
+      </div>
+      <button class="topbar-toggler more"><i class="gg-more-vertical-alt"></i></button>
+    </div>
+  </div>
+
+  <div class="sidebar-wrapper scrollbar scrollbar-inner">
+    <div class="sidebar-content">
+      <ul class="nav nav-secondary">
+        <li class="nav-item active">
+          <a href="foodcounter.php">
+            <i class="fas fa-home"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+</ul>
+</div>
+</div></div>
       <!-- End Sidebar -->
 
       <div class="main-panel">
-        <div class="main-header" data-aos="fade-down" data-aos-delay="100">
+        <div class="main-header">
           <div class="main-header-logo">
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
@@ -141,126 +282,117 @@ input[type="number"] {
           <!-- End Navbar -->
         </div>
 
-        <div class="container">
-          <div class="page-inner">
-            <div class="page-header">
-              <h3 class="fw-bold mb-3">MENU</h3>
-              <ul class="breadcrumbs mb-3">
-                <li class="nav-home">
-                  <a href="index.php">
-                    <i class="fa fa-home"></i>
-                  </a>
-                </li>
-                <li class="separator">
-                  <i class="icon-arrow-right"></i>
-                </li>
-                <li class="nav-item">
-                  <a href="foodtypes.php">Available Food Items</a>
-                </li>
-              </ul>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card" data-aos="fade-up" data-aos-delay="200">
-                  <div class="card-header">
-                    <div class="d-flex align-items-center w-100 gap-3 flex-wrap">
-                      <h4 class="card-title me-auto mb-2 mb-md-0">Add Menu</h4>
 
-                      <!-- Food item dropdown -->
-                      <select class="form-select shadow-sm border-0" id="foodItemSelect" style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px; padding:10px;">
-                        <option selected disabled>Select food item</option>
-                        <option value="Pizza">Pizza</option>
-                        <option value="Burger">Burger</option>
-                        <option value="Pasta">Pasta</option>
-                        <!-- Add more items as needed -->
-                      </select>
+        <div id="token-notifications"></div>
+<div class="container">
+  <div class="page-inner">
+    <div class="page-header">
+      <h3 class="fw-bold mb-3">COUNTER PANEL</h3>
+      <ul class="breadcrumbs mb-3">
+        <li class="nav-home">
+          <a href="index.php">
+            <i class="
+fas fa-concierge-bell"></i>
+          </a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+        <li class="nav-item">
+          <a href="foodtypes.php">Counter A</a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+        <li class="nav-item">
+          <a href="foodtypes.php">Pending Order: <span class="order-count">3</span></a>
+        </li>
+      </ul>
+    </div>
 
-                      <!-- Counter select dropdown -->
-                      <select class="form-select shadow-sm border-0" id="counterSelect" style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px; padding:10px;">
-                        <option selected disabled>Select counter</option>
-                        <option value="A">Counter A</option>
-                        <option value="B">Counter B</option>
-                      </select>
-
-                      <!-- Stylish quantity input -->
-                      <div class="quantity-wrapper d-flex align-items-center gap-2" style="background-color: #f1faff; padding: 6px 10px; border-radius: 8px;">
-                        <button class="btn btn-sm" onclick="adjustQuantity(-1)" style="background-color: rgb(0, 176, 234); color: white; font-weight: bold; border-radius: 50%; width: 32px; height: 32px;">-</button>
-                        <input type="number" id="foodQuantityInput" class="form-control text-center" value="1" min="1" style="width: 60px; border: none; background: transparent; font-weight: 600; color: #333;" />
-                        <button class="btn btn-sm" onclick="adjustQuantity(1)" style="background-color: rgb(0, 176, 234); color: white; font-weight: bold; border-radius: 50%; width: 32px; height: 32px;">+</button>
-                      </div>
-
-                      <!-- Add button -->
-                      <button
-                        class="btn btn-round shadow-sm"
-                        style="background-color: rgb(0, 176, 234); color: white; font-weight: 500; border-radius: 25px; padding: 8px 16px;"
-                        data-bs-toggle="modal"
-                        data-bs-target="#addRowModal"
-                      >
-                        <i class="fa fa-plus me-1"></i> Add
+    <div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive ">
+              <table class="display table table-striped table-hover table-head-bg-info mt-4 mb-4" style="border-radius:20px;overflow:hidden;">
+                <thead class="table-info">
+                  <tr class="text-center">
+                    <th class="col-token">Token No</th>
+                    <th class="text-start col-food">Food Item (Qty)</th>
+                    <th class="col-parcel">Parcel</th>
+                    <th class="col-call">Call Token</th>
+                    <th class="col-delivery">Delivery Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center table-white">
+                    <td>101</td>
+                    <td class="text-start">
+                      <div class="food-item">Idli (2)</div>
+                      <div class="food-item">Vada (1)</div>
+                    </td>
+                    <td>Yes</td>
+                    <td>
+                      <button class="btn btn-warning btn-sm" onclick="callToken('101')">
+                        <i class="fa-solid fa-volume-up" style="font-size:12px;"></i>
                       </button>
-                    </div>
-                  </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-success btn-sm" onclick="confirmDelivery('101')" style="font-weight:500;"><b>&#10003;</b></button>
+                    </td>
+                  </tr>
 
+                  <tr class="text-center table-gray">
+                    <td>103</td>
+                    <td class="text-start">
+                      <div class="food-item">Dosa (1)</div>
+                      <div class="food-item">Upma (1)</div>
+                    </td>
+                    <td>No</td>
+                    <td>
+                      <button class="btn btn-warning btn-sm" onclick="callToken('103')">
+                        <i class="fa-solid fa-volume-up" style="font-size:12px;"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="btn btn-success btn-sm" onclick="confirmDelivery('103')" style="font-weight:500;"><b>&#10003;</b></button>
+                    </td>
+                  </tr>
 
-                  <div class="card-body">
-                    <!-- Modal -->
-                    <div class="table-responsive">
-                      <table
-                        id="add-row"
-                        class="display table table-striped table-hover table-head-bg-info mt-4"
-                        style="border-radius:25px; overflow: hidden;"
-                      >
-                        <thead>
-                          <tr>
-                            <th>S.No</th>
-                            <th>Food Item (s)</th>
-                            <th>Quantity</th>
-                            <th style="width: 10%">Action</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>System Architect</td>
-                            <td>100
-                            </td>
-                            <td>
-                              <div class="form-button-action">
-                                <button
-                                  type="button"
-                                  data-bs-toggle="tooltip"
-                                  title=""
-                                  class="btn btn-link btn-primary btn-lg"
-                                  data-original-title="Edit Task"
-                                >
-                                  <i class="fa fa-edit" style="font-size:20px;"></i>
-                                </button>
-                                <button
-                                  type="button"
-                                  data-bs-toggle="tooltip"
-                                  title=""
-                                  class="btn btn-link btn-danger"
-                                  data-original-title="Remove"
-                                >
-                                  <i class="fa fa-trash" style="font-size:18px;"></i>
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-
-                        </tbody>
-
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  <tr class="text-center table-white">
+                    <td>105</td>
+                    <td class="text-start">
+                      <div class="food-item">Pongal (1)</div>
+                      <div class="food-item">Coffee (1)</div>
+                      <div class="food-item">Sambar Vada (1)</div>
+                    </td>
+                    <td>Yes</td>
+                    <td>
+                      <button class="btn btn-warning btn-sm" onclick="callToken('105')">
+                        <i class="fa-solid fa-volume-up" style="font-size:12px;"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="btn btn-success btn-sm" onclick="confirmDelivery('105')" style="font-weight:500;"><b>&#10003;</b></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
+        </div> <!-- /.row -->
+          </div> <!-- /.card-body -->
+        </div> <!-- /.card -->
+      </div> <!-- /.col -->
+    </div> <!-- /.row -->
+  </div> <!-- /.page-inner -->
+</div>
 
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
+
 
       </div>
 
@@ -456,6 +588,98 @@ input[type="number"] {
       </div>
       <!-- End Custom template -->
     </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+<script>
+  const notifications = new Map();
+
+  function callToken(token) {
+    const container = document.getElementById('token-notifications');
+
+    // Create notification div
+    const notification = document.createElement('div');
+    notification.className = 'token-notification';
+
+    // Text span
+    const textSpan = document.createElement('span');
+    textSpan.className = 'token-text';
+    textSpan.textContent = `Token Called: ${token}`;
+
+    // Wrong button
+const wrongBtn = document.createElement('button');
+wrongBtn.className = 'btn-wrong';
+wrongBtn.innerHTML = '<i class="fa-solid fas fa-window-close" style="color:white;font-size:25px;"></i>'; // or fa-times
+
+    wrongBtn.onclick = () => {
+      clearTimeout(notifications.get(notification));
+      notifications.delete(notification);
+      container.removeChild(notification);
+    };
+
+    notification.appendChild(textSpan);
+    notification.appendChild(wrongBtn);
+
+    // Add notification at the bottom (new notifications come below)
+    container.appendChild(notification);
+
+    // Auto remove after 6 seconds
+    const timer = setTimeout(() => {
+      if (container.contains(notification)) {
+        container.removeChild(notification);
+        notifications.delete(notification);
+      }
+    }, 6000);
+
+    notifications.set(notification, timer);
+  }
+
+
+
+
+  function confirmDelivery(token) {
+    Swal.fire({
+      title: 'Do you want to mark this order delivered?',
+      icon: 'question', // will be replaced by custom image
+      imageWidth: 64,
+      imageHeight: 64,
+      imageAlt: 'Question Icon',
+      showCancelButton: true,
+      confirmButtonText: '<i class="fa fa-check"></i> Yes, Delivered',
+      cancelButtonText: '<i class="fa fa-eye"></i> No, Not Delivered',
+      reverseButtons: true, // Swap Yes/No positions so "No" left and "Yes" right
+      customClass: {
+        confirmButton: 'btn btn-success mx-2', // green
+        cancelButton: 'btn btn-danger mx-2'   // red
+      },
+      buttonsStyling: false
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Delivered!',
+          text: `Order with token ${token} marked as delivered.`,
+          confirmButtonText: '<i class="fa fa-check"></i> OK',
+          customClass: {
+            confirmButton: 'btn btn-success'
+          },
+          buttonsStyling: false
+        });
+        // You can add your backend update logic here
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Cancelled',
+          text: 'Order not marked as delivered.',
+          confirmButtonText: '<i class="fa fa-times"></i> OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          },
+          buttonsStyling: false
+        });
+      }
+    });
+  }
+</script>
     <!--   Core JS Files   -->
     <script src="assets/js/core/jquery-3.7.1.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
@@ -542,10 +766,6 @@ input[type="number"] {
   }
 </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
   </body>
 </html>
+

@@ -965,7 +965,7 @@ small {
                 </li>
 
                 <li class="nav-item topbar-user dropdown hidden-caret">
-                 <a class="dropdown-item" href="#" style="font-size: larger;color:#fff;"><i class="
+                 <a class="dropdown-item" href="login.php" style="font-size: larger;color:#fff;"><i class="
                         fas fa-sign-out-alt" style="font-size: medium;"></i>&nbsp; Logout</a>
                 </li>
               </ul>
