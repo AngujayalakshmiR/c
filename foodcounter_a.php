@@ -185,6 +185,7 @@ overflow-x: hidden;
 
 
 </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -218,7 +219,7 @@ overflow-x: hidden;
       <!-- End Sidebar -->
 
       <div class="main-panel">
-        <div class="main-header">
+        <div class="main-header" data-aos="fade-down" data-aos-delay="100">
           <div class="main-header-logo">
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
@@ -312,7 +313,7 @@ fas fa-concierge-bell"></i>
 
     <div class="row">
   <div class="col-md-12">
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
       <div class="card-body">
         <div class="row">
           <div class="col-md-12">
@@ -331,8 +332,8 @@ fas fa-concierge-bell"></i>
                   <tr class="text-center table-white">
                     <td>101</td>
                     <td class="text-start">
-                      <div class="food-item">Idli (2)</div>
-                      <div class="food-item">Vada (1)</div>
+                      <div class="food-item">Parotta (2)</div>
+                      <div class="food-item">Chicken Manchurian (1)</div>
                     </td>
                     <td>Yes</td>
                     <td>
@@ -348,8 +349,8 @@ fas fa-concierge-bell"></i>
                   <tr class="text-center table-gray">
                     <td>103</td>
                     <td class="text-start">
-                      <div class="food-item">Dosa (1)</div>
-                      <div class="food-item">Upma (1)</div>
+                      <div class="food-item">Biriyani (1)</div>
+                      <div class="food-item">Chicken Manchurian (1)</div>
                     </td>
                     <td>No</td>
                     <td>
@@ -365,9 +366,8 @@ fas fa-concierge-bell"></i>
                   <tr class="text-center table-white">
                     <td>105</td>
                     <td class="text-start">
-                      <div class="food-item">Pongal (1)</div>
-                      <div class="food-item">Coffee (1)</div>
-                      <div class="food-item">Sambar Vada (1)</div>
+                      <div class="food-item">Parotta (1)</div>
+                      <div class="food-item">Chicken Manchurian (1)</div>
                     </td>
                     <td>Yes</td>
                     <td>
@@ -764,6 +764,11 @@ wrongBtn.innerHTML = '<i class="fa-solid fas fa-window-close" style="color:white
     value = Math.max(1, value + change);
     input.value = value;
   }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 
   </body>

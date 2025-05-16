@@ -1219,9 +1219,9 @@ small {
       <div class="input-group w-50">
       </div>
       <div>
-        <button class="btn btn-custom btn-update me-2">
+        <!-- <button class="btn btn-custom btn-update me-2">
           <i class="bi bi-arrow-clockwise" style="transition: transform 0.3s ease;"></i>Update
-        </button>
+        </button> -->
 
         <button class="btn btn-custom btn-clear">
           <i class="bi bi-trash" style="transition: transform 0.3s ease;"></i>Clear

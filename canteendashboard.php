@@ -145,7 +145,7 @@
             <div class="col-md-4">
                 <div class="card card-secondary bg-secondary-gradient" data-aos="fade-up" data-aos-delay="200">
                   <div class="card-body bubble-shadow">
-                    <h1>188</h1>
+                    <h1>250</h1>
                     <h5 class="op-8">RazorPay Orders</h5>
                     <div class="pull-right">
                       <h3 class="fw-bold op-8">25%</h3>
@@ -156,7 +156,7 @@
               <div class="col-md-4">
                 <div class="card card-secondary bg-secondary-gradient" data-aos="fade-up" data-aos-delay="300">
                   <div class="card-body bubble-shadow">
-                    <h1>188</h1>
+                    <h1>150</h1>
                     <h5 class="op-8">Cash Orders</h5>
                     <div class="pull-right">
                       <h3 class="fw-bold op-8">25%</h3>
@@ -167,7 +167,7 @@
               <div class="col-md-4">
                 <div class="card card-secondary bg-secondary-gradient" data-aos="fade-up" data-aos-delay="400">
                   <div class="card-body bubble-shadow">
-                    <h1>188</h1>
+                    <h1>400</h1>
                     <h5 class="op-8">Total Orders</h5>
                     <div class="pull-right">
                       <h3 class="fw-bold op-8">25%</h3>

@@ -213,9 +213,39 @@
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td>System Architect</td>
+                            <td>Chicken Manchurian</td>
                             <td>
-                              <img src="assets/img/profile.jpg" alt="Food Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" />
+                              <img src="assets/img/f1.jpg" alt="Food Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" />
+                            </td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit" style="font-size:20px;"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-trash" style="font-size:18px;"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>2</td>
+                            <td>Parotta</td>
+                            <td>
+                              <img src="assets/img/parotta.jpeg" alt="Food Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" />
                             </td>
                             <td>
                               <div class="form-button-action">

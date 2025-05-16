@@ -169,9 +169,8 @@ input[type="number"] {
                       <!-- Food item dropdown -->
                       <select class="form-select shadow-sm border-0" id="foodItemSelect" style="max-width: 250px; background-color: #f1faff; color: #333; border-radius: 8px; padding:10px;">
                         <option selected disabled>Select food item</option>
-                        <option value="Pizza">Pizza</option>
-                        <option value="Burger">Burger</option>
-                        <option value="Pasta">Pasta</option>
+                        <option value="Parotta">Parotta</option>
+                        <option value="Chicken Manchurian">Chicken Manchurian</option>
                         <!-- Add more items as needed -->
                       </select>
 
@@ -222,8 +221,36 @@ input[type="number"] {
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td>System Architect</td>
-                            <td>100
+                            <td>Parotta</td>
+                            <td>150
+                            </td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit" style="font-size:20px;"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-trash" style="font-size:18px;"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Chicken Manchurian</td>
+                            <td>180
                             </td>
                             <td>
                               <div class="form-button-action">

@@ -1157,8 +1157,8 @@ small {
       <div class="col-md-8 col-6 d-flex text-start align-items-center">
         <img src="assets/img/briyani.jpeg" class="item-img me-3" style="border:  1px solid color-mix(in srgb, #212529, transparent 90%);" alt="Product">
         <div>
-          <div class="lorem-font">Lorem ipsum dolor</div>
-          <small><span class="price-label">Price:</span> $89.99</small>
+          <div class="lorem-font">Briyani</div>
+          <small><span class="price-label">Price:</span> 80</small>
 <br>
           <a href="#" class="remove-btn"><i class="bi bi-trash"></i> Remove</a> 
         </div>
@@ -1172,7 +1172,7 @@ small {
 </div>
 
 <div class="col-md-2 col-3 d-flex justify-content-center align-items-center stack-on-mobile">
-  <div class="price ">$49.99</div>
+  <div class="price ">80</div>
 </div>
 
 
@@ -1183,8 +1183,8 @@ small {
       <div class="col-md-8 col-6 d-flex text-start align-items-center">
         <img src="assets/img/parotta.jpeg" class="item-img me-3" style="border:  1px solid color-mix(in srgb, #212529, transparent 90%);" alt="Product">
         <div>
-          <div class="lorem-font">Consectetur elit</div>
-          <small><span class="price-label">Price:</span> $89.99</small>
+            <div class="lorem-font">Parotta</div>
+          <small><span class="price-label">Price:</span> 80</small>
 <br>
           <a href="#" class="remove-btn"><i class="bi bi-trash"></i> Remove</a>
         </div>
@@ -1198,7 +1198,7 @@ small {
 </div>
 
 <div class="col-md-2 col-3 d-flex justify-content-center align-items-center stack-on-mobile">
-  <div class="price">$49.99</div>
+  <div class="price">80</div>
 </div>
 
 
@@ -1209,8 +1209,8 @@ small {
       <div class="col-md-8 col-6 d-flex text-start align-items-center">
         <img src="assets/img/samosa.jpg" class="item-img me-3" style="border:  1px solid color-mix(in srgb, #212529, transparent 90%);" alt="Product">
         <div>
-          <div class="lorem-font">Sed do eiusmod</div>
-          <small><span class="price-label">Price:</span> $89.99</small>
+          <div class="lorem-font">Samosa</div>
+          <small><span class="price-label">Price:</span> 80</small>
 <br>
           <a href="#" class="remove-btn"><i class="bi bi-trash"></i> Remove</a>
         </div>
@@ -1224,7 +1224,7 @@ small {
 </div>
 
 <div class="col-md-2 col-3 d-flex justify-content-center align-items-center stack-on-mobile">
-  <div class="price">$49.99</div>
+  <div class="price">80</div>
 </div>
 
 
@@ -1235,9 +1235,9 @@ small {
       <div class="input-group w-50">
       </div>
       <div>
-        <button class="btn btn-custom btn-update me-2">
+        <!-- <button class="btn btn-custom btn-update me-2">
           <i class="bi bi-arrow-clockwise" style="transition: transform 0.3s ease;"></i>Update
-        </button>
+        </button> -->
 
         <button class="btn btn-custom btn-clear">
           <i class="bi bi-trash" style="transition: transform 0.3s ease;"></i>Clear
