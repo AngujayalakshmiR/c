@@ -941,36 +941,20 @@ small {
   to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes slideInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
-@keyframes zoomFade {
-  0% { transform: scale(1.2); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes fadeInScale {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes fadeInLeft {
-  0% { opacity: 0; transform: translateX(-40px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
-/* General fade-in animation with delay */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.parallelogram img, .parallelogram2 img {
+  position: relative;
+  z-index: 0;
 }
 
   </style>
@@ -984,22 +968,23 @@ small {
       <p class="hero-subtitle">"Where Technology Serves Taste."</p>
     </div>
 
-    <div class="parallelogram d-none d-md-flex">
+    <div class="parallelogram d-none d-md-flex" data-aos="fade-up" data-aos-delay="200">
+      <div class="image-overlay"></div>
       <img src="assets/img/hero-section.jpg" alt="Hero Image">
     </div>
 
-    <div class="parallelogram2 d-none d-md-flex">
+    <div class="parallelogram2 d-none d-md-flex" data-aos="fade-up" data-aos-delay="300">
+      <div class="image-overlay"></div>
       <img src="assets/img/hero-section.jpg" alt="Hero Image">
     </div>
   </div>
 
 
-
-<div style="background-color: white;">
+  <div style="background-color: white;">
   <section class="container py-4 ">
   <div class="row g-2 justify-content-center custom-gap">
   <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="200">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1007,7 +992,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="300">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1015,7 +1000,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="400">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1023,7 +1008,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="500">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1031,7 +1016,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="600">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1039,7 +1024,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="700">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1047,7 +1032,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="800">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1055,7 +1040,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="900">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1063,7 +1048,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1000">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1071,16 +1056,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
-        <div class="availability-count">5</div>
-        <button class="add-btn"><i class="fas fa-plus"></i></button>
-        <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
-        <div class="food-label text-center">Briyani</div>
-      </div>
-    </div>
-
-    <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1100">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1088,7 +1064,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1200">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1096,7 +1072,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1300">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1104,7 +1080,7 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1400">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1112,7 +1088,23 @@ small {
       </div>
     </div>
     <div class="col-auto">
-      <div class="food-square-card position-relative" data-aos="fade-up">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1500">
+        <div class="availability-count">5</div>
+        <button class="add-btn"><i class="fas fa-plus"></i></button>
+        <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
+        <div class="food-label text-center">Briyani</div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1600">
+        <div class="availability-count">5</div>
+        <button class="add-btn"><i class="fas fa-plus"></i></button>
+        <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
+        <div class="food-label text-center">Briyani</div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <div class="food-square-card position-relative" data-aos="fade-up" data-aos-delay="1700">
         <div class="availability-count">5</div>
         <button class="add-btn"><i class="fas fa-plus"></i></button>
         <img src="assets/img/briyani.jpeg" alt="Briyani" class="card-img-top">
@@ -1124,14 +1116,6 @@ small {
       </div>
 </section>
     </div>
-
-
-
-
-
-
-
-
 
   <div class="container my-5">
 
@@ -1251,7 +1235,7 @@ small {
 
       <!-- Right: Order Summary -->
       <div class="col-lg-4 mt-4 mt-lg-0">
-        <div class="order-summary" data-aos="fade-up">
+        <div class="order-summary" data-aos="fade-up" data-aos-delay="500">
           <h5 class="mb-3 mt-2 summary-title">Order Summary</h5>
           <div class="d-flex justify-content-between">
             <span>Subtotal</span>
